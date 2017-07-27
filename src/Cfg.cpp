@@ -7,6 +7,10 @@ Cfg::Cfg() {
 
 Cfg::Cfg(std::string name) {
   mName = name;
+  readFromFilename(mName);
+}
+
+int Cfg::readFromFilename(std::string name) {
   std::ifstream in(name);
   if (in.is_open()) {
     readFromStream(in);

@@ -13,6 +13,7 @@ class Cfg {
     Cfg(std::string name);
 
     int readFromStream(std::ifstream &in);
+    int readFromFilename(std::string name);
 
     std::string get(std::string key);
     void set(std::string key, std::string value);
